@@ -28,17 +28,14 @@ O sistema funciona da seguinte forma:
 2. O LED onboard inicia desligado e pisca algumas vezes indicando inicialização.
 3. O dispositivo lê continuamente o valor de luminosidade do sensor LDR.
 4. Os dados de luminosidade são enviados para FIWARE via MQTT.
-5. O LED pode ser controlado remotamente pela nuvem, recebendo comandos:
-   - `"lamp001@on|"` → Liga o LED.
-   - `"lamp001@off|"` → Desliga o LED.
-6. Todas as operações são registradas no **Serial Monitor** para acompanhamento.
+5. O LED pode ser controlado remotamente pela nuvem, recebendo comandos, via PostMan.
 
 ---
 
 ## 🔥 Funcionalidades Diferenciais
 
 - Controle remoto do LED via **MQTT** e FIWARE.
-- Publicação periódica da luminosidade em **escala de 0 a 100%**.
+- Publicação periódica da luminosidade em **escala de 0 a 100**.
 - Reconexão automática ao **Wi-Fi** e ao **Broker MQTT**.
 - Simulação no **Wokwi** para prototipagem rápida e validação.
 - Código totalmente comentado e modular para fácil manutenção.
@@ -47,25 +44,45 @@ O sistema funciona da seguinte forma:
 
 ## 📦 Componentes Utilizados
 
-### 🛠️ Hardware:
+### 🛠️ Hardware
 - 1x ESP32 DEVKIT 1
 - 1x Sensor de Luminosidade (LDR)
 - 1x LED onboard do ESP32
-- Protoboard e jumpers para testes físicos
 
-### 📚 Bibliotecas:
+
+### 📚 Bibliotecas
 - `WiFi.h` → Conexão Wi-Fi do ESP32
 - `PubSubClient.h` → Cliente MQTT para envio e recepção de mensagens
+---
+## 🎬 Demonstração
+
+### 📸 Simulação no Wokwi
+🔗Clique <a href="https://wokwi.com/projects/441458700389768193"> aqui </a> para acessar a simulação no Wokwi.
+
+
+### 📽️ Vídeo da implementação
+🔗 Clique <a href="https://youtu.be/uq3vlq9WLEc"> aqui </a> para acessar o vídeo no Youtube.
 
 ---
 
-## 🚀 Como Executar
+## 🤝 Contribuições
 
-1. Clone ou baixe este repositório.
-2. Abra o arquivo `smart_lamp.ino` na IDE do Arduino.
-3. Configure os parâmetros de Wi-Fi e MQTT/FIWARE no código:
+Este projeto foi desenvolvido como parte de estudos em **IoT e Edge Computing**, aplicando conceitos de sensores, atuadores e comunicação entre dispositivos e nuvem.  
 
-```cpp
-const char* SSID = "SeuWiFi";
-const char* PASSWORD = "SuaSenha";
-const char* BROKER_MQTT = "IP_DO_BROKER";
+
+### 🌟 Destaques
+
+- Comunicação bidirecional entre ESP32 e FIWARE  
+- Controle remoto do LED de forma confiável  
+- Registro contínuo de luminosidade  
+- Código modular, comentado e pronto para extensão
+
+---
+
+## 📄 Licença
+
+Este projeto é de uso **educacional e acadêmico**. Sinta-se livre para estudar, adaptar e se inspirar! ✨
+
+---
+
+> Desenvolvido com dedicação, criatividade e muitas horas de café por Enzo Ramos, Felipe Cerazi, Gustavo Peaguda e Lorenzo Coque 💻💡
